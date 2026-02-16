@@ -15,20 +15,35 @@ export default function Privacy() {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}><strong>Última actualización:</strong> Febrero 2026</p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                <Section title="1. Información que Recopilamos">
-                    <ul style={{ listStyle: 'disc', paddingLeft: '20px' }}>
-                        <li><strong>Cuenta:</strong> Email, nombre (opcional).</li>
-                        <li><strong>Académica:</strong> Carreras, materias, notas, horarios.</li>
-                        <li><strong>Uso:</strong> Sesiones de estudio, estadísticas, reseñas.</li>
-                        <li><strong>Técnica:</strong> Modelo de dispositivo, identificadores para notificaciones.</li>
+                <Section title="1. Introducción">
+                    <p>
+                        En <strong>MiFACU</strong>, respetamos tu privacidad y nos comprometemos a proteger los datos personales que compartes con nosotros.
+                        Esta política explica cómo recopilamos, utilizamos, almacenamos y compartimos tu información cuando utilizas nuestra aplicación móvil y sitio web.
+                    </p>
+                </Section>
+
+                <Section title="2. Información que Recopilamos">
+                    <p>Recopilamos diferentes tipos de información para proporcionar y mejorar nuestro servicio:</p>
+                    <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '1rem' }}>
+                        <li><strong>Información de la Cuenta:</strong> Al registrarte, recopilamos tu dirección de correo electrónico, nombre (opcional) y foto de perfil (si utilizas inicio de sesión social).</li>
+                        <li><strong>Datos Académicos:</strong> Información ingresada voluntariamente sobre tu carrera, materias, notas, horarios de cursada y fechas de exámenes.</li>
+                        <li><strong>Datos de Uso:</strong> Información sobre cómo interactúas con la aplicación, incluyendo sesiones de estudio (Pomodoro), interacción con Milo (mascota virtual) y estadísticas de progreso.</li>
+                        <li><strong>Información del Dispositivo:</strong> Modelo del dispositivo, versión del sistema operativo, identificadores únicos de dispositivo y datos de fallos (logs) para mantenimiento técnico.</li>
                     </ul>
                 </Section>
 
-                <Section title="2. Uso de la Información">
-                    <p>Usamos tus datos para brindarte el servicio, sincronizar entre dispositivos y mejorar la app. <strong>No vendemos tus datos a terceros.</strong></p>
+                <Section title="3. Finalidad del Tratamiento de Datos">
+                    <p>Utilizamos tus datos para los siguientes fines:</p>
+                    <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '1rem' }}>
+                        <li><strong>Provisión del Servicio:</strong> Permitirte gestionar tu vida académica, guardar tu progreso y sincronizar tus datos entre múltiples dispositivos.</li>
+                        <li><strong>Mejora del Producto:</strong> Analizar tendencias de uso anónimas para desarrollar nuevas funcionalidades y corregir errores.</li>
+                        <li><strong>Notificaciones:</strong> Enviarte recordatorios de exámenes, avisos de correlatividades y actualizaciones importantes sobre el servicio (puedes optar por no recibirlas).</li>
+                        <li><strong>Soporte al Usuario:</strong> Responder a tus consultas y solucionar problemas técnicos.</li>
+                    </ul>
                 </Section>
 
-                <Section title="3. Servicios de Terceros">
+                <Section title="4. Compartir Información con Terceros">
+                    <p>No vendemos ni alquilamos tus datos personales a terceros. Sin embargo, compartimos información con proveedores de servicios de confianza necesarios para operar la aplicación:</p>
                     <div style={{ overflowX: 'auto' }}>
                         <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem' }}>
                             <thead>
@@ -38,16 +53,49 @@ export default function Privacy() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Supabase</td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Base de datos y Auth</td></tr>
-                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>RevenueCat</td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Suscripciones</td></tr>
-                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Google/Apple</td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Login Social</td></tr>
+                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}><strong>Supabase</strong></td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Alojamiento de base de datos segura y autenticación de usuarios.</td></tr>
+                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}><strong>RevenueCat</strong></td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Gestión de suscripciones Premium y pagos en aplicaciones.</td></tr>
+                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}><strong>Google / Apple</strong></td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Servicios de autenticación (Social Login).</td></tr>
                             </tbody>
                         </table>
                     </div>
                 </Section>
 
-                <Section title="4. Tus Derechos">
-                    <p>Puedes acceder, corregir, eliminar o exportar tus datos contactándonos a <strong>mifacuapp@gmail.com</strong>.</p>
+                <Section title="5. Seguridad de los Datos">
+                    <p>
+                        Implementamos medidas de seguridad técnicas y organizativas razonables para proteger tus datos contra el acceso no autorizado, la pérdida o alteración.
+                        Utilizamos cifrado en tránsito (HTTPS) y en reposo para datos sensibles. Sin embargo, ningún método de transmisión por Internet es 100% seguro.
+                    </p>
+                </Section>
+
+                <Section title="6. Retención de Datos">
+                    <p>
+                        Conservamos tus datos personales mientras tu cuenta permanezca activa o sea necesario para prestarte el servicio.
+                        Si decides eliminar tu cuenta, tus datos personales se eliminarán de nuestros servidores activos, aunque pueden persistir en copias de seguridad durante un periodo limitado por razones técnicas y legales.
+                    </p>
+                </Section>
+
+                <Section title="7. Privacidad de Menores">
+                    <p>
+                        Nuestros servicios no están dirigidos a menores de 13 años. No recopilamos conscientemente información personal de niños menores de 13 años.
+                        Si descubrimos que hemos recopilado información de un menor sin verificación del consentimiento de los padres, tomaremos medidas para eliminar esa información.
+                    </p>
+                </Section>
+
+                <Section title="8. Tus Derechos">
+                    <p>Dependiendo de tu ubicación, puedes tener derecho a:</p>
+                    <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '1rem' }}>
+                        <li>Acceder a los datos personales que tenemos sobre ti.</li>
+                        <li>Solicitar la corrección de datos inexactos.</li>
+                        <li>Solicitar la eliminación de tu cuenta y todos tus datos ("Derecho al olvido").</li>
+                        <li>Oponerte al procesamiento de tus datos.</li>
+                    </ul>
+                    <p style={{ marginTop: '1rem' }}>Para ejercer estos derechos, contáctanos a través de nuestro correo de soporte.</p>
+                </Section>
+
+                <Section title="9. Contacto">
+                    <p>Si tienes preguntas sobre esta Política de Privacidad, por favor contáctanos en:</p>
+                    <p style={{ marginTop: '0.5rem', fontSize: '1.1rem' }}>📧 <strong>mifacuapp@gmail.com</strong></p>
                 </Section>
             </div>
         </motion.div>
