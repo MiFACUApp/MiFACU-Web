@@ -1,0 +1,9 @@
+{
+    # Global options
+    email mifacuapp@gmail.com
+}
+
+# Replace 'mifacu.com' with your actual domain name
+{$DOMAIN_NAME} {
+    reverse_proxy web:80
+}
