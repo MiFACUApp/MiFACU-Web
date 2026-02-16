@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, AlertTriangle, Clock, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Countdown from '../components/Countdown';
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -49,6 +50,16 @@ export default function Home() {
                             Dejá de sufrir la carrera y empezá a gestionarla. Organizá tus materias, prevení desastres con correlativas y mantené la motivación alta con MiFACU.
                         </motion.p>
                         <motion.div variants={fadeIn}>
+                            <h2 style={{
+                                fontSize: '2rem',
+                                color: 'var(--dark-blue)',
+                                fontWeight: '700',
+                                marginTop: '3rem',
+                                marginBottom: '-1.5rem'
+                            }}>
+                                16 de Marzo de 2026
+                            </h2>
+                            <Countdown targetDate="2026-03-16T00:00:00" />
                             <Link to="/" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',

@@ -34,9 +34,41 @@ Esta guía te ayudará a desplegar la nueva versión React de MiFACU en tu VPS c
     sudo docker compose up -d --build
     ```
 
-## Verificación
-*   Accede a `https://tudominio.com`.
-*   Caddy generará automáticamente el certificado SSL.
+## 🚨 Solución de Problemas (Troubleshooting)
+
+### Error: `Bind for 0.0.0.0:80 failed: port is already allocated`
+
+Si ves este error, significa que otro programa (Nginx antiguo, Apache, o contenedores viejos) ya está usando el puerto 80.
+
+**Paso 1: Detener contenedores Docker antiguos**
+Ejecuta esto para detener TODOS los contenedores corriendo (cuidado si tienes otras apps en el servidor):
+```bash
+sudo docker rm -f $(sudo docker ps -aq)
+```
+
+**Paso 2: Detener Nginx/Apache del sistema**
+A veces Nginx está instalado directamente en el sistema operativo, no en Docker.
+```bash
+sudo systemctl stop nginx
+sudo systemctl disable nginx
+# O si usas Apache:
+sudo systemctl stop apache2
+sudo systemctl disable apache2
+```
+
+**Paso 3: Verificar puertos libres**
+Asegúrate de que nada escuche en el puerto 80:
+```bash
+sudo lsof -i :80
+# O
+sudo netstat -tulpn | grep :80
+```
+Si no sale nada, el puerto está libre.
+
+**Paso 4: Reintentar el despliegue**
+```bash
+sudo docker compose up -d --build
+```
 
 ## Actualizaciones Futuras
 Para actualizar el sitio cuando hagas cambios en el código:
