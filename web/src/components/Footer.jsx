@@ -3,34 +3,34 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer style={{ backgroundColor: 'var(--white)', padding: '3rem 0', borderTop: '1px solid #e1e4e8', marginTop: 'auto' }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
-                <div style={{ flex: '1', minWidth: '200px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-                        <img src="/logo.jpeg" alt="miFACU Logo" style={{ height: '30px', borderRadius: '6px' }} />
-                        <span style={{ fontWeight: '700', color: 'var(--text-main)' }}>MiFACU</span>
+        <footer className="footer">
+            <div className="container footer-container">
+                <div className="footer-brand">
+                    <div className="footer-logo-group">
+                        <img src="/logo.jpeg" alt="miFACU Logo" className="footer-logo-img" />
+                        <span className="footer-logo-text">MiFACU</span>
                     </div>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                    <p className="footer-description">
                         Tu título universitario, un día a la vez using. Gestioná tu carrera, evitá trabas y motivate con Milo.
                     </p>
-                    <div style={{ marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                    <div className="footer-copyright">
                         &copy; {new Date().getFullYear()} miFACU. Todos los derechos reservados.
                     </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '3rem' }}>
+                <div className="footer-links-group">
                     <div>
-                        <h4 style={{ margin: '0 0 1rem 0', color: 'var(--text-main)' }}>Legal</h4>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <Link to="/privacy" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Política de Privacidad</Link>
-                            <Link to="/terms" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Términos de Uso</Link>
+                        <h4 className="footer-section-title">Legal</h4>
+                        <div className="footer-links-column">
+                            <Link to="/privacy" className="footer-link">Política de Privacidad</Link>
+                            <Link to="/terms" className="footer-link">Términos de Uso</Link>
                         </div>
                     </div>
                     <div>
-                        <h4 style={{ margin: '0 0 1rem 0', color: 'var(--text-main)' }}>Contacto</h4>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <a href="mailto:mifacuapp@gmail.com" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>mifacuapp@gmail.com</a>
-                            <a href="https://www.instagram.com/mifacuapp" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Instagram</a>
+                        <h4 className="footer-section-title">Contacto</h4>
+                        <div className="footer-links-column">
+                            <a href="mailto:mifacuapp@gmail.com" className="footer-link">mifacuapp@gmail.com</a>
+                            <a href="https://www.instagram.com/mifacuapp" target="_blank" rel="noreferrer" className="footer-link">Instagram</a>
                         </div>
                     </div>
                 </div>

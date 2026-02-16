@@ -18,61 +18,27 @@ export default function Home() {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                padding: '6rem 0 4rem',
-                background: 'linear-gradient(135deg, #f4f5f7 0%, #e6efff 100%)',
-                textAlign: 'center',
-                overflow: 'hidden'
-            }}>
+            <section className="hero-section">
                 <div className="container">
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
-                        style={{ maxWidth: '800px', margin: '0 auto' }}
+                        className="hero-content"
                     >
-                        <motion.h1 variants={fadeIn} style={{
-                            fontSize: '3.5rem',
-                            marginBottom: '1.5rem',
-                            color: 'var(--dark-blue)',
-                            letterSpacing: '-1px',
-                            lineHeight: '1.1'
-                        }}>
+                        <motion.h1 variants={fadeIn} className="hero-title">
                             Tu Título Universitario,<br />
-                            <span style={{ color: 'var(--primary-blue)' }}>Un Día a la Vez</span>
+                            <span className="hero-title-highlight">Un Día a la Vez</span>
                         </motion.h1>
-                        <motion.p variants={fadeIn} style={{
-                            fontSize: '1.25rem',
-                            color: 'var(--text-secondary)',
-                            marginBottom: '2.5rem',
-                            lineHeight: '1.6'
-                        }}>
+                        <motion.p variants={fadeIn} className="hero-subtitle">
                             Dejá de sufrir la carrera y empezá a gestionarla. Organizá tus materias, prevení desastres con correlativas y mantené la motivación alta con MiFACU.
                         </motion.p>
                         <motion.div variants={fadeIn}>
-                            <h2 style={{
-                                fontSize: '2rem',
-                                color: 'var(--dark-blue)',
-                                fontWeight: '700',
-                                marginTop: '3rem',
-                                marginBottom: '-1.5rem'
-                            }}>
+                            <h2 className="launch-date">
                                 16 de Marzo de 2026
                             </h2>
                             <Countdown targetDate="2026-03-16T00:00:00" />
-                            <Link to="/" style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '8px',
-                                backgroundColor: 'var(--primary-blue)',
-                                color: 'white',
-                                padding: '16px 32px',
-                                borderRadius: '50px',
-                                fontWeight: '600',
-                                fontSize: '1.1rem',
-                                boxShadow: '0 10px 25px rgba(0, 82, 204, 0.3)',
-                                transition: 'all 0.3s ease'
-                            }}>
+                            <Link to="/" className="cta-button">
                                 Disponible Próximamente <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -81,7 +47,7 @@ export default function Home() {
             </section>
 
             {/* Features Section */}
-            <section style={{ padding: '5rem 0', backgroundColor: 'var(--white)' }}>
+            <section className="features-section">
                 <div className="container">
                     <motion.div
                         initial="hidden"
@@ -89,11 +55,6 @@ export default function Home() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={staggerContainer}
                         className="features-grid"
-                        style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                            gap: '2.5rem'
-                        }}
                     >
                         <FeatureCard
                             icon={<Map size={40} color="var(--primary-blue)" />}
@@ -116,11 +77,11 @@ export default function Home() {
             </section>
 
             {/* Value Proposition */}
-            <section style={{ padding: '5rem 0', backgroundColor: 'var(--light-bg)' }}>
+            <section className="value-prop-section">
                 <div className="container">
-                    <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--dark-blue)' }}>¿Por qué MiFACU?</h2>
-                        <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                    <div className="value-prop-container">
+                        <h2 className="value-prop-title">¿Por qué MiFACU?</h2>
+                        <div className="value-prop-list">
                             <CheckItem text="Evita atrasarte por correlativas olvidadas." />
                             <CheckItem text="Motivación constante con gamificación (Milo)." />
                             <CheckItem text="Organización visual de fechas de exámenes." />
@@ -135,30 +96,19 @@ export default function Home() {
 
 function FeatureCard({ icon, title, description }) {
     return (
-        <motion.div variants={fadeIn} style={{
-            padding: '2rem',
-            borderRadius: '24px',
-            backgroundColor: 'white',
-            border: '1px solid #f1f1f1',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.02)',
-            transition: 'transform 0.3s ease',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center'
-        }}
+        <motion.div variants={fadeIn} className="feature-card"
             whileHover={{ y: -5, boxShadow: '0 15px 30px rgba(0,0,0,0.08)' }}
         >
-            <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{icon}</div>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text-main)' }}>{title}</h3>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>{description}</p>
+            <div className="feature-icon-wrapper">{icon}</div>
+            <h3 className="feature-title">{title}</h3>
+            <p className="feature-description">{description}</p>
         </motion.div>
     );
 }
 
 function CheckItem({ text }) {
     return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.1rem', color: 'var(--text-main)' }}>
+        <div className="check-item">
             <CheckCircle size={24} color="var(--primary-blue)" style={{ flexShrink: 0 }} />
             <span>{text}</span>
         </div>
