@@ -89,11 +89,7 @@ export default function Home() {
                             title="Mapa de Carrera"
                             description="Visualizá tu progreso real. No solo una lista de materias, sino un camino claro hacia tu título."
                         />
-                        <FeatureCard
-                            icon={<AlertTriangle size={40} color="var(--accent-orange)" />}
-                            title="Detector de Trabas"
-                            description="Nuestro sistema te avisa ANTES de que pierdas una correlativa clave. Salvá tu año académico."
-                        />
+
                         <FeatureCard
                             icon={<Clock size={40} color="var(--secondary-blue)" />}
                             title="Estudio Inteligente"
