@@ -28,7 +28,7 @@ export default function Header() {
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 20px' }}>
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <img src="/logo.jpeg" alt="miFACU Logo" style={{ height: '40px', borderRadius: '8px' }} />
+                    <img src="/logo.jpeg" alt="MiFACU Logo" style={{ height: '40px', borderRadius: '8px' }} />
                     <span style={{
                         fontSize: '1.5rem',
                         fontWeight: '700',
@@ -36,7 +36,7 @@ export default function Header() {
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}>
-                        miFACU
+                        MiFACU
                     </span>
                 </Link>
 

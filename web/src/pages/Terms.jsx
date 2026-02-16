@@ -15,12 +15,12 @@ export default function Terms() {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}><strong>Última actualización:</strong> Febrero 2026</p>
 
             <section style={{ marginBottom: '2.5rem' }}>
-                <p>Bienvenido a <strong>miFACU</strong>. Al descargar, instalar o utilizar la aplicación, aceptas estos Términos y Condiciones.</p>
+                <p>Bienvenido a <strong>MiFACU</strong>. Al descargar, instalar o utilizar la aplicación, aceptas estos Términos y Condiciones.</p>
             </section>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <Section title="1. Descripción del Servicio">
-                    <p>miFACU es un planificador universitario que permite a los estudiantes organizar materias, horarios, exámenes, y utilizar herramientas de estudio con gamificación.</p>
+                    <p>MiFACU es un planificador universitario que permite a los estudiantes organizar materias, horarios, exámenes, y utilizar herramientas de estudio con gamificación.</p>
                 </Section>
 
                 <Section title="2. Uso de la Aplicación">
@@ -38,7 +38,7 @@ export default function Terms() {
                 </Section>
 
                 <Section title="4. Propiedad Intelectual">
-                    <p>Todo el contenido y diseño de miFACU es propiedad de sus desarrolladores. No está permitido copiar o distribuir la app sin permiso.</p>
+                    <p>Todo el contenido y diseño de MiFACU es propiedad de sus desarrolladores. No está permitido copiar o distribuir la app sin permiso.</p>
                 </Section>
 
                 <Section title="5. Limitación de Responsabilidad">

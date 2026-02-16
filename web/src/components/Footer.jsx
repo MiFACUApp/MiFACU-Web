@@ -8,7 +8,7 @@ export default function Footer() {
                 <div style={{ flex: '1', minWidth: '200px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
                         <img src="/logo.jpeg" alt="miFACU Logo" style={{ height: '30px', borderRadius: '6px' }} />
-                        <span style={{ fontWeight: '700', color: 'var(--text-main)' }}>miFACU</span>
+                        <span style={{ fontWeight: '700', color: 'var(--text-main)' }}>MiFACU</span>
                     </div>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
                         Tu título universitario, un día a la vez using. Gestioná tu carrera, evitá trabas y motivate con Milo.

@@ -46,7 +46,7 @@ export default function Home() {
                             marginBottom: '2.5rem',
                             lineHeight: '1.6'
                         }}>
-                            Dejá de sufrir la carrera y empezá a gestionarla. Organizá tus materias, prevení desastres con correlativas y mantené la motivación alta con miFACU.
+                            Dejá de sufrir la carrera y empezá a gestionarla. Organizá tus materias, prevení desastres con correlativas y mantené la motivación alta con MiFACU.
                         </motion.p>
                         <motion.div variants={fadeIn}>
                             <Link to="/" style={{
@@ -112,7 +112,7 @@ export default function Home() {
             <section style={{ padding: '5rem 0', backgroundColor: 'var(--light-bg)' }}>
                 <div className="container">
                     <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--dark-blue)' }}>¿Por qué miFACU?</h2>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--dark-blue)' }}>¿Por qué MiFACU?</h2>
                         <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             <CheckItem text="Evita atrasarte por correlativas olvidadas." />
                             <CheckItem text="Motivación constante con gamificación (Milo)." />
