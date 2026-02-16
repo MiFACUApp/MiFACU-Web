@@ -134,11 +134,15 @@ function FeatureCard({ icon, title, description }) {
             backgroundColor: 'white',
             border: '1px solid #f1f1f1',
             boxShadow: '0 4px 6px rgba(0,0,0,0.02)',
-            transition: 'transform 0.3s ease'
+            transition: 'transform 0.3s ease',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center'
         }}
             whileHover={{ y: -5, boxShadow: '0 15px 30px rgba(0,0,0,0.08)' }}
         >
-            <div style={{ marginBottom: '1.5rem' }}>{icon}</div>
+            <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{icon}</div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text-main)' }}>{title}</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>{description}</p>
         </motion.div>
