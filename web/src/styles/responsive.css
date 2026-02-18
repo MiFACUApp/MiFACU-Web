@@ -1,105 +1,146 @@
-/* responsive.css */
+/* ─── Tablet (< 1024px) ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .mini-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .milo-row,
+    .correlativas-inner,
+    .personalization-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .milo-row-reverse .milo-text-col  { order: 2; }
+    .milo-row-reverse .milo-mockup-col { order: 1; }
+}
+
+/* ─── Mobile (< 768px) ───────────────────────────────────────── */
 @media (max-width: 768px) {
+    /* Hero — texto primero, cards después */
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
 
-    /* Global Container */
+    .hero-text {
+        align-items: center;
+    }
+
+    .hero-subtitle {
+        text-align: center;
+    }
+
+    /* Mockup va DESPUÉS del texto (orden natural del DOM) */
+    .hero-mockup {
+        order: 1;
+        max-width: 420px;
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .hero-phone {
+        transform: none;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .stat-item:nth-child(2)::after,
+    .stat-item:nth-child(4)::after {
+        display: none;
+    }
+
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mini grid — 2 columnas en mobile */
+    .mini-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Universities */
+    .uni-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section headers */
+    .section-header {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .section-sub {
+        margin-inline: auto;
+    }
+
+    /* Container padding */
     .container {
         padding: 0 16px;
     }
 
-    /* Header */
-    .header-container {
-        padding: 1rem 16px;
+    /* Milo rows — reduce gap */
+    .milo-row {
+        gap: 2rem;
     }
 
-    .logo-text {
-        font-size: 1.25rem;
-    }
-
-    /* Hero Section */
-    .hero-section {
-        padding: 4rem 0 3rem;
-    }
-
+    /* Hero section heading */
     .hero-title {
-        font-size: 2.25rem;
+        font-size: clamp(1.875rem, 8vw, 2.75rem);
     }
 
-    .hero-subtitle {
-        font-size: 1rem;
+    /* Reduce heading sizes slightly */
+    .section-heading {
+        font-size: clamp(1.625rem, 6vw, 2.25rem);
     }
+}
 
-    .launch-date {
-        font-size: 1.5rem;
-    }
-
-    /* Countdown */
-    .countdown-container {
-        padding: 1rem;
-        margin-top: 2rem;
-    }
-
-    .countdown-item {
-        margin: 0.5rem 0.5rem;
-        min-width: 60px;
-    }
-
-    .countdown-number {
-        font-size: 2rem;
-    }
-
-    .countdown-label {
-        font-size: 0.75rem;
-    }
-
-    .cta-button {
+/* ─── Very small (< 400px) ───────────────────────────────────── */
+@media (max-width: 400px) {
+    .hero-cta-btn {
         width: 100%;
-        max-width: 300px;
         justify-content: center;
-        padding: 12px 24px;
-        font-size: 1rem;
     }
 
-    /* Features Section */
-    .features-section {
-        padding: 3rem 0;
-    }
-
-    .features-grid {
+    /* Mini grid — 1 columna en pantallas muy pequeñas */
+    .mini-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    /* Value Proposition Section */
-    .value-prop-section {
-        padding: 3rem 0;
-    }
-
-    .value-prop-title {
-        font-size: 1.75rem;
-    }
-
-    .value-prop-list {
-        gap: 1rem;
-    }
-
-    .check-item {
-        font-size: 1rem;
-        align-items: flex-start;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 2rem 0;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .footer-links-group {
-        flex-direction: column;
-        gap: 2rem;
     }
 }

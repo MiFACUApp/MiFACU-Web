@@ -1,99 +1,145 @@
-/* pages.css */
-
-/* Home Page */
-
-/* Hero Section */
-.hero-section {
-    padding: 6rem 0 4rem;
-    background: linear-gradient(135deg, #f4f5f7 0%, #e6efff 100%);
-    text-align: center;
-    overflow: hidden;
+/* ─── Hero ───────────────────────────────────────────────────── */
+.hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--dark-blue);
-    letter-spacing: -1px;
-    line-height: 1.1;
-}
-
-.hero-title-highlight {
-    color: var(--primary-blue);
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
-}
-
-.launch-date {
-    font-size: 2rem;
-    color: var(--dark-blue);
-    font-weight: 700;
-    margin-top: 3rem;
-    margin-bottom: -1.5rem;
-}
-
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    box-shadow: 0 10px 25px rgba(0, 82, 204, 0.3);
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(0, 82, 204, 0.4);
-}
-
-/* Features Section */
-.features-section {
-    padding: 5rem 0;
-    background-color: var(--white);
-}
-
-.features-grid {
+.hero-inner {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
-/* Value Proposition Section */
-.value-prop-section {
-    padding: 5rem 0;
-    background-color: var(--light-bg);
-}
-
-.value-prop-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.value-prop-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--dark-blue);
-}
-
-.value-prop-list {
-    text-align: left;
+.hero-text {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+.hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--text);
+}
+
+.hero-subtitle {
+    font-size: 1.0625rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.hero-mockup {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-phone {
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.15));
+    transform: perspective(1000px) rotateY(-8deg) rotateX(3deg);
+}
+
+/* ─── Stats ──────────────────────────────────────────────────── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: var(--border);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    margin-top: 0.375rem;
+    line-height: 1.4;
+}
+
+/* ─── Privacy / Terms pages ──────────────────────────────────── */
+.legal-page {
+    padding: 4rem 0 6rem;
+}
+
+.legal-page h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.legal-page h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 2rem 0 0.75rem;
+}
+
+.legal-page p, .legal-page li {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.legal-page ul {
+    padding-left: 1.25rem;
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }

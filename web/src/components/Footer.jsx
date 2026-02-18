@@ -1,40 +1,68 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            <div className="container footer-container">
-                <div className="footer-brand">
-                    <div className="footer-logo-group">
-                        <img src="/logo.jpeg" alt="miFACU Logo" className="footer-logo-img" />
-                        <span className="footer-logo-text">miFACU</span>
+        <footer style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', padding: '3.5rem 0 2rem' }}>
+            <div className="container footer-grid">
+                {/* Brand */}
+                <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: '0.75rem' }}>
+                        <img src="/logo.jpeg" alt="miFACU" style={{ height: 28, borderRadius: 6 }} />
+                        <span style={{ fontWeight: 800, fontSize: '1.125rem', color: 'var(--text)' }}>miFACU</span>
                     </div>
-                    <p className="footer-description">
-                        Tu título universitario, un día a la vez using. Gestioná tu carrera, evitá trabas y motivate con Milo.
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.6, maxWidth: 280 }}>
+                        El compañero académico de los estudiantes universitarios argentinos.
                     </p>
-                    <div className="footer-copyright">
-                        &copy; {new Date().getFullYear()} miFACU. Todos los derechos reservados.
+                </div>
+
+                {/* App */}
+                <div>
+                    <h4 style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
+                        App
+                    </h4>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                        {[
+                            { label: 'Descargar iOS', href: '#descargar' },
+                            { label: 'Descargar Android', href: '#descargar' },
+                            { label: 'Ver funciones', href: '#features' },
+                            { label: 'Precios', href: '#precios' },
+                        ].map(l => (
+                            <a key={l.label} href={l.href} style={{ fontSize: '0.875rem', color: 'var(--muted)', transition: 'color 0.15s' }}>
+                                {l.label}
+                            </a>
+                        ))}
                     </div>
                 </div>
 
-                <div className="footer-links-group">
-                    <div>
-                        <h4 className="footer-section-title">Legal</h4>
-                        <div className="footer-links-column">
-                            <Link to="/privacy" className="footer-link">Política de Privacidad</Link>
-                            <Link to="/terms" className="footer-link">Términos de Uso</Link>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="footer-section-title">Contacto</h4>
-                        <div className="footer-links-column">
-                            <a href="mailto:mifacuapp@gmail.com" className="footer-link">mifacuapp@gmail.com</a>
-                            <a href="https://www.instagram.com/mifacuapp" target="_blank" rel="noreferrer" className="footer-link">Instagram</a>
-                        </div>
+                {/* Legal */}
+                <div>
+                    <h4 style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
+                        Legal
+                    </h4>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                        <Link to="/privacy" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>Privacidad</Link>
+                        <Link to="/terms" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>Términos de uso</Link>
+                        <a href="mailto:mifacuapp@gmail.com" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>Contacto</a>
+                        <a href="https://www.instagram.com/mifacuapp" target="_blank" rel="noreferrer" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>Instagram</a>
                     </div>
                 </div>
             </div>
+
+            {/* Bottom bar */}
+            <div
+                className="container"
+                style={{
+                    marginTop: '2.5rem',
+                    paddingTop: '1.25rem',
+                    borderTop: '1px solid var(--border)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}
+            >
+                <p style={{ fontSize: '0.8125rem', color: 'var(--muted)' }}>
+                    © {new Date().getFullYear()} miFACU. Hecho con ❤️ para estudiantes argentinos.
+                </p>
+            </div>
         </footer>
-    );
+    )
 }
