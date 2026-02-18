@@ -31,7 +31,7 @@ export default function Home() {
                             <span className="hero-title-highlight">Un Día a la Vez</span>
                         </motion.h1>
                         <motion.p variants={fadeIn} className="hero-subtitle">
-                            Dejá de sufrir la carrera y empezá a gestionarla. Organizá tus materias, prevení desastres con correlativas y mantené la motivación alta con MiFACU.
+                            Dejá de sufrir la carrera y empezá a gestionarla. Organizá tus materias, prevení desastres con correlativas y mantené la motivación alta con miFACU.
                         </motion.p>
                         <motion.div variants={fadeIn}>
                             <h2 className="launch-date">
@@ -80,7 +80,7 @@ export default function Home() {
             <section className="value-prop-section">
                 <div className="container">
                     <div className="value-prop-container">
-                        <h2 className="value-prop-title">¿Por qué MiFACU?</h2>
+                        <h2 className="value-prop-title">¿Por qué miFACU?</h2>
                         <div className="value-prop-list">
                             <CheckItem text="Evita atrasarte por correlativas olvidadas." />
                             <CheckItem text="Motivación constante con gamificación (Milo)." />

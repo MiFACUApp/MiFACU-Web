@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="footer-brand">
                     <div className="footer-logo-group">
                         <img src="/logo.jpeg" alt="miFACU Logo" className="footer-logo-img" />
-                        <span className="footer-logo-text">MiFACU</span>
+                        <span className="footer-logo-text">miFACU</span>
                     </div>
                     <p className="footer-description">
                         Tu título universitario, un día a la vez using. Gestioná tu carrera, evitá trabas y motivate con Milo.

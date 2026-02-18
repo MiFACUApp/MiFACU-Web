@@ -20,9 +20,9 @@ export default function Header() {
         <header className="header">
             <div className="container header-container">
                 <Link to="/" className="logo-link">
-                    <img src="/logo.jpeg" alt="MiFACU Logo" className="logo-img" />
+                    <img src="/logo.jpeg" alt="miFACU Logo" className="logo-img" />
                     <span className="logo-text">
-                        MiFACU
+                        miFACU
                     </span>
                 </Link>
 

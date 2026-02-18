@@ -17,7 +17,7 @@ export default function Privacy() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <Section title="1. Introducción">
                     <p>
-                        En <strong>MiFACU</strong>, respetamos tu privacidad y nos comprometemos a proteger los datos personales que compartes con nosotros.
+                        En <strong>miFACU</strong>, respetamos tu privacidad y nos comprometemos a proteger los datos personales que compartes con nosotros.
                         Esta política explica cómo recopilamos, utilizamos, almacenamos y compartimos tu información cuando utilizas nuestra aplicación móvil y sitio web.
                     </p>
                 </Section>

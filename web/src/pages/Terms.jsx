@@ -16,7 +16,7 @@ export default function Terms() {
 
             <section style={{ marginBottom: '2.5rem' }}>
                 <p>
-                    Bienvenido a <strong>MiFACU</strong>. Estos Términos y Condiciones ("Términos") rigen tu acceso y uso de la aplicación móvil MiFACU y nuestro sitio web.
+                    Bienvenido a <strong>miFACU</strong>. Estos Términos y Condiciones ("Términos") rigen tu acceso y uso de la aplicación móvil miFACU y nuestro sitio web.
                     Al descargar, instalar o utilizar la aplicación, aceptas estar legalmente vinculado por estos Términos. Si no estás de acuerdo, no debes utilizar la aplicación.
                 </p>
             </section>
@@ -24,12 +24,12 @@ export default function Terms() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <Section title="1. Descripción del Servicio">
                     <p>
-                        MiFACU es una herramienta de gestión académica y productividad diseñada para estudiantes universitarios.
+                        miFACU es una herramienta de gestión académica y productividad diseñada para estudiantes universitarios.
                         Ofrece funcionalidades como seguimiento de materias, control de correlatividades, agenda de exámenes, herramientas de estudio (Pomodoro) y elementos de gamificación.
                     </p>
                     <p style={{ marginTop: '1rem', fontStyle: 'italic', fontWeight: '500', color: 'var(--dark-blue)' }}>
-                        <strong>Descargo de responsabilidad importante:</strong> MiFACU NO es una aplicación oficial de ninguna universidad ni institución educativa.
-                        La información académica (planes de estudio, notas, fechas) es gestionada u cargada por el usuario. MiFACU no garantiza la exactitud de los datos cargados ni su coincidencia con los registros oficiales (como SIU Guaraní u otros sistemas institucionales).
+                        <strong>Descargo de responsabilidad importante:</strong> miFACU NO es una aplicación oficial de ninguna universidad ni institución educativa.
+                        La información académica (planes de estudio, notas, fechas) es gestionada u cargada por el usuario. miFACU no garantiza la exactitud de los datos cargados ni su coincidencia con los registros oficiales (como SIU Guaraní u otros sistemas institucionales).
                     </p>
                 </Section>
 
@@ -52,7 +52,7 @@ export default function Terms() {
                 </Section>
 
                 <Section title="4. Suscripciones y Pagos">
-                    <p>MiFACU ofrece una versión gratuita y una suscripción "Premium" con funcionalidades adicionales.</p>
+                    <p>miFACU ofrece una versión gratuita y una suscripción "Premium" con funcionalidades adicionales.</p>
                     <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '1rem' }}>
                         <li><strong>Facturación:</strong> Las suscripciones se facturan a través de tu cuenta de Apple App Store o Google Play Store.</li>
                         <li><strong>Renovación Automática:</strong> Tu suscripción se renovará automáticamente al final de cada período (mensual o anual) a menos que la canceles al menos 24 horas antes del vencimiento.</li>
@@ -63,14 +63,14 @@ export default function Terms() {
 
                 <Section title="5. Propiedad Intelectual">
                     <p>
-                        La aplicación MiFACU, incluyendo su diseño, código, gráficos, la marca "MiFACU" y el personaje "Milo", son propiedad exclusiva de sus desarrolladores y están protegidos por leyes de derechos de autor y propiedad intelectual.
+                        La aplicación miFACU, incluyendo su diseño, código, gráficos, la marca "miFACU" y el personaje "Milo", son propiedad exclusiva de sus desarrolladores y están protegidos por leyes de derechos de autor y propiedad intelectual.
                         Se te otorga una licencia limitada, no exclusiva e intransferible para usar la aplicación estrictamente para fines personales y no comerciales.
                     </p>
                 </Section>
 
                 <Section title="6. Limitación de Responsabilidad">
                     <p>
-                        La aplicación se proporciona "tal cual" y "según disponibilidad". En la máxima medida permitida por la ley, MiFACU y sus desarrolladores no serán responsables por:
+                        La aplicación se proporciona "tal cual" y "según disponibilidad". En la máxima medida permitida por la ley, miFACU y sus desarrolladores no serán responsables por:
                     </p>
                     <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '0.5rem' }}>
                         <li>Daños indirectos, incidentales o consecuentes derivados del uso de la aplicación.</li>
