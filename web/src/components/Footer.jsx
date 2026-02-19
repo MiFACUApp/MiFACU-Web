@@ -1,6 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Footer() {
+    const { pathname } = useLocation()
+
+    // If we are not on the home page, we prepend '/' to the hash links
+    // e.g. '#features' -> '/#features'
+    const getHref = (hash) => {
+        if (pathname === '/' && hash.startsWith('#')) return hash
+        return `/${hash}`
+    }
+
     return (
         <footer style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', padding: '3.5rem 0 2rem' }}>
             <div className="container footer-grid">
@@ -27,9 +36,9 @@ export default function Footer() {
                             { label: 'Ver funciones', href: '#features' },
                             { label: 'Precios', href: '#precios' },
                         ].map(l => (
-                            <a key={l.label} href={l.href} style={{ fontSize: '0.875rem', color: 'var(--muted)', transition: 'color 0.15s' }}>
+                            <Link key={l.label} to={getHref(l.href)} style={{ fontSize: '0.875rem', color: 'var(--muted)', transition: 'color 0.15s', textDecoration: 'none' }}>
                                 {l.label}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>

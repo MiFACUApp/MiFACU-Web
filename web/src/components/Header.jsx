@@ -18,6 +18,13 @@ export default function Header() {
 
     useEffect(() => { setIsOpen(false) }, [location])
 
+    // If we are not on the home page, we prepend '/' to the hash links
+    // e.g. '#features' -> '/#features'
+    const getHref = (hash) => {
+        if (location.pathname === '/' && hash.startsWith('#')) return hash
+        return `/${hash}`
+    }
+
     const navLinks = [
         { label: 'Features', href: '#features' },
         { label: 'Milo', href: '#milo' },
@@ -49,9 +56,9 @@ export default function Header() {
                 {/* Desktop Nav */}
                 <nav className="header-desktop-nav" aria-label="Navegación principal">
                     {navLinks.map(link => (
-                        <a key={link.label} href={link.href} className="header-nav-link">
+                        <Link key={link.label} to={getHref(link.href)} className="header-nav-link">
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -108,14 +115,14 @@ export default function Header() {
                     >
                         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '1rem 24px 1.25rem' }}>
                             {navLinks.map(link => (
-                                <a
+                                <Link
                                     key={link.label}
-                                    href={link.href}
+                                    to={getHref(link.href)}
                                     onClick={() => setIsOpen(false)}
-                                    style={{ padding: '0.6rem 0', color: 'var(--muted)', fontWeight: 500, fontSize: '1rem' }}
+                                    style={{ padding: '0.6rem 0', color: 'var(--muted)', fontWeight: 500, fontSize: '1rem', textDecoration: 'none' }}
                                 >
                                     {link.label}
-                                </a>
+                                </Link>
                             ))}
                             <a href="#descargar" className="btn btn-primary" style={{ marginTop: 8, justifyContent: 'center' }}>
                                 Descargar gratis

@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import { AnimatePresence } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
@@ -15,6 +16,7 @@ function App() {
 
     return (
         <ThemeProvider>
+            <ScrollToTop />
             <LaunchProvider>
                 <a href="#main-content" className="skip-link">Ir al contenido principal</a>
                 <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
