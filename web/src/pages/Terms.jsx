@@ -97,7 +97,7 @@ export default function Terms() {
 
 function Section({ title, children }) {
     return (
-        <div style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '16px', boxShadow: '0 2px 4px rgba(0,0,0,0.03)' }}>
+        <div style={{ backgroundColor: 'var(--card)', padding: '2rem', borderRadius: '16px', boxShadow: 'var(--shadow)' }}>
             <h2 style={{ color: 'var(--dark-blue)', marginBottom: '1rem', fontSize: '1.5rem' }}>{title}</h2>
             <div style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
                 {children}

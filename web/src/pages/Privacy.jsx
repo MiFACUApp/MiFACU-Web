@@ -47,15 +47,15 @@ export default function Privacy() {
                     <div style={{ overflowX: 'auto' }}>
                         <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem' }}>
                             <thead>
-                                <tr style={{ backgroundColor: '#f4f5f7' }}>
+                                <tr style={{ backgroundColor: 'var(--bg-2)' }}>
                                     <th style={{ padding: '12px', textAlign: 'left', borderRadius: '8px 0 0 8px' }}>Servicio</th>
                                     <th style={{ padding: '12px', textAlign: 'left', borderRadius: '0 8px 8px 0' }}>Propósito</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}><strong>Supabase</strong></td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Alojamiento de base de datos segura y autenticación de usuarios.</td></tr>
-                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}><strong>RevenueCat</strong></td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Gestión de suscripciones Premium y pagos en aplicaciones.</td></tr>
-                                <tr><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}><strong>Google / Apple</strong></td><td style={{ padding: '12px', borderBottom: '1px solid #eee' }}>Servicios de autenticación (Social Login).</td></tr>
+                                <tr><td style={{ padding: '12px', borderBottom: '1px solid var(--border)' }}><strong>Supabase</strong></td><td style={{ padding: '12px', borderBottom: '1px solid var(--border)' }}>Alojamiento de base de datos segura y autenticación de usuarios.</td></tr>
+                                <tr><td style={{ padding: '12px', borderBottom: '1px solid var(--border)' }}><strong>RevenueCat</strong></td><td style={{ padding: '12px', borderBottom: '1px solid var(--border)' }}>Gestión de suscripciones Premium y pagos en aplicaciones.</td></tr>
+                                <tr><td style={{ padding: '12px', borderBottom: '1px solid var(--border)' }}><strong>Google / Apple</strong></td><td style={{ padding: '12px', borderBottom: '1px solid var(--border)' }}>Servicios de autenticación (Social Login).</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -104,7 +104,7 @@ export default function Privacy() {
 
 function Section({ title, children }) {
     return (
-        <div style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '16px', boxShadow: '0 2px 4px rgba(0,0,0,0.03)' }}>
+        <div style={{ backgroundColor: 'var(--card)', padding: '2rem', borderRadius: '16px', boxShadow: 'var(--shadow)' }}>
             <h2 style={{ color: 'var(--dark-blue)', marginBottom: '1rem', fontSize: '1.5rem' }}>{title}</h2>
             <div style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
                 {children}
