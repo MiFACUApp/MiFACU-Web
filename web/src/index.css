@@ -1,60 +1,70 @@
 /* ─── Design Tokens ──────────────────────────────────────────── */
 :root {
   /* Brand */
-  --navy:    #1A2B4A;
-  --accent:  #2563EB;
-  --amber:   #F59E0B;
-  --green:   #58CC02;
-  --gold:    #D4AF37;
-  --violet:  #8B5CF6;
-  --teal:    #14B8A6;
+  --navy: #1A2B4A;
+  --accent: #2563EB;
+  --amber: #F59E0B;
+  --green: #58CC02;
+  --gold: #D4AF37;
+  --violet: #8B5CF6;
+  --teal: #14B8A6;
   --emerald: #10B981;
-  --orange:  #F97316;
+  --orange: #F97316;
 
   /* Light theme */
-  --bg:       #FFFFFF;
-  --bg-2:     #F8F9FA;
-  --text:     #0F172A;
-  --muted:    #64748B;
-  --border:   rgba(0, 0, 0, 0.06);
-  --card:     #FFFFFF;
-  --shadow:   0 4px 32px rgba(0, 0, 0, 0.08);
-  --nav-bg:   rgba(255, 255, 255, 0.85);
+  --bg: #FFFFFF;
+  --bg-2: #F8F9FA;
+  --text: #0F172A;
+  --muted: #64748B;
+  --border: rgba(0, 0, 0, 0.06);
+  --card: #FFFFFF;
+  --shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  --nav-bg: rgba(255, 255, 255, 0.85);
 
   /* Misc */
-  --font:      'Inter', system-ui, -apple-system, sans-serif;
-  --radius:    16px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius: 16px;
   --radius-lg: 24px;
   --transition: all 0.2s ease;
 
   /* Legacy aliases (Privacy/Terms pages) */
-  --primary-blue:    var(--accent);
-  --secondary-blue:  var(--accent);
-  --dark-blue:       var(--navy);
-  --light-bg:        var(--bg-2);
-  --white:           var(--bg);
-  --text-main:       var(--text);
-  --text-secondary:  var(--muted);
-  --accent-orange:   var(--amber);
-  --font-family:     var(--font);
+  --primary-blue: var(--accent);
+  --secondary-blue: var(--accent);
+  --dark-blue: var(--navy);
+  --light-bg: var(--bg-2);
+  --white: var(--bg);
+  --text-main: var(--text);
+  --text-secondary: var(--muted);
+  --accent-orange: var(--amber);
+  --font-family: var(--font);
 }
 
 [data-theme="dark"] {
-  --bg:     #0A0A0A;
-  --bg-2:   #111111;
-  --text:   #F8FAFC;
-  --muted:  rgba(255, 255, 255, 0.55);
+  --bg: #0A0A0A;
+  --bg-2: #111111;
+  --text: #F8FAFC;
+  --muted: rgba(255, 255, 255, 0.55);
   --border: rgba(255, 255, 255, 0.08);
-  --card:   rgba(255, 255, 255, 0.04);
+  --card: rgba(255, 255, 255, 0.04);
   --shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
   --nav-bg: rgba(10, 10, 10, 0.85);
-  --navy:   #3B82F6;
+  --navy: #3B82F6;
   --accent: #60A5FA;
 }
 
 /* ─── Base Reset ─────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: var(--font);
@@ -62,11 +72,23 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  position: relative;
 }
 
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-img { max-width: 100%; display: block; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
 
 /* ─── Layout ─────────────────────────────────────────────────── */
 .container {
@@ -122,6 +144,7 @@ img { max-width: 100%; display: block; }
   color: #fff;
   box-shadow: 0 4px 20px rgba(26, 43, 74, 0.25);
 }
+
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(26, 43, 74, 0.35);
@@ -132,6 +155,7 @@ img { max-width: 100%; display: block; }
   color: var(--text);
   border: 1.5px solid var(--border);
 }
+
 .btn-outline:hover {
   background: var(--bg-2);
   transform: translateY(-2px);
@@ -142,15 +166,25 @@ img { max-width: 100%; display: block; }
   color: #1A2B4A;
   box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
 }
+
 .btn-gold:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(212, 175, 55, 0.5);
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-2); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
 
 /* ─── Accessibility ──────────────────────────────────────────── */
 :focus-visible {
@@ -173,16 +207,25 @@ img { max-width: 100%; display: block; }
   transition: top 0.2s;
   text-decoration: none;
 }
-.skip-link:focus { top: 0; }
+
+.skip-link:focus {
+  top: 0;
+}
 
 /* ─── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
-  html { scroll-behavior: auto; }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* ─── Badge/Tag ──────────────────────────────────────────────── */

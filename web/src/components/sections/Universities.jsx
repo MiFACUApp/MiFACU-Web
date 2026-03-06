@@ -5,26 +5,110 @@ const unis = [
         name: 'UTN',
         full: 'Universidad Tecnológica Nacional',
         carreras: [
-            { name: 'Ingeniería en Sistemas (ISI)', calendar: true },
-            { name: 'Ingeniería Química (IQ)',       calendar: true },
+            { name: 'Ingeniería en Sistemas', calendar: true },
+            { name: 'Ingeniería Electromecánica', calendar: true },
+            { name: 'Ingeniería Química', calendar: true },
+            { name: 'Licenciatura en Administración Rural', calendar: true },
         ],
     },
     {
-        name: 'UNNE',
-        full: 'Universidad Nacional del Nordeste',
+        name: 'UNNE Arquitectura',
+        full: 'Arquitectura y Urbanismo',
         carreras: [
-            { name: 'Arquitectura',           calendar: true  },
-            { name: 'Diseño Gráfico',         calendar: true  },
-            { name: 'Ingeniería Agronómica',  calendar: false },
+            { name: 'Diseño Gráfico', calendar: true },
+            { name: 'Arquitectura', calendar: true },
+        ],
+    },
+    {
+        name: 'UNCAS',
+        full: 'Universidad Nacional del Chaco Austral',
+        carreras: [
+            { name: 'Ingeniería en Sistemas de Información', calendar: false },
+            { name: 'Licenciatura en Psicología', calendar: false },
+            { name: 'Ingeniería Industrial', calendar: false },
+            { name: 'Ingeniería Química', calendar: false },
+            { name: 'Ingeniería en Alimentos', calendar: false },
+            { name: 'Licenciatura en Nutrición', calendar: false },
+            { name: 'Contador Público', calendar: false },
+            { name: 'Farmacia', calendar: false },
+            { name: 'Licenciatura en Administración', calendar: false },
+            { name: 'Medicina', calendar: false },
+            { name: 'Ingeniería Agronómica', calendar: false },
+            { name: 'Ciencias Veterinarias', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Agrarias',
+        full: 'Ciencias Agrarias',
+        carreras: [
+            { name: 'Ingeniería Industrial', calendar: false },
+            { name: 'Ingeniería Agronómica', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Económicas',
+        full: 'Ciencias Económicas',
+        carreras: [
+            { name: 'Contador Público', calendar: false },
+            { name: 'Licenciado en Administración', calendar: false },
+            { name: 'Licenciado en Economía', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Exactas',
+        full: 'Ciencias Exactas y Naturales y Agrimensura',
+        carreras: [
             { name: 'Ingeniería en Agrimensura', calendar: false },
-            { name: 'Ingeniería Industrial',  calendar: false },
+            { name: 'Ingeniería Eléctrica', calendar: false },
+            { name: 'Ingeniería en Electrónica', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Veterinarias',
+        full: 'Ciencias Veterinarias',
+        carreras: [
+            { name: 'Ciencias Veterinarias', calendar: false },
+            { name: 'Tecnicatura en Administración de Empresas', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Derecho',
+        full: 'Derecho y Ciencias Sociales y Políticas',
+        carreras: [
+            { name: 'Martillero Público', calendar: false },
+            { name: 'Abogacía', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Ingeniería',
+        full: 'Ingeniería',
+        carreras: [
+            { name: 'Ingeniería Civil', calendar: false },
+            { name: 'Ingeniería Electromecánica', calendar: false },
+            { name: 'Ingeniería Mecánica', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Medicina',
+        full: 'Medicina',
+        carreras: [
+            { name: 'Licenciatura en Enfermería', calendar: false },
+            { name: 'Medicina', calendar: false },
+            { name: 'Licenciatura en Kinesiología y Fisiatría', calendar: false },
+        ],
+    },
+    {
+        name: 'UNNE Odontología',
+        full: 'Odontología',
+        carreras: [
+            { name: 'Odontología', calendar: false },
         ],
     },
 ]
 
 export default function Universities() {
     return (
-        <section style={{ padding: '5rem 0', background: 'var(--bg)' }}>
+        <section id="universidades" style={{ padding: '5rem 0', background: 'var(--bg)' }}>
             <div className="container">
                 <motion.div
                     className="section-header"

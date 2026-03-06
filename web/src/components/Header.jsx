@@ -28,6 +28,7 @@ export default function Header() {
     const navLinks = [
         { label: 'Features', href: '#features' },
         { label: 'Milo', href: '#milo' },
+        { label: 'Universidades', href: '#universidades' },
         { label: 'Precios', href: '#precios' },
         { label: 'Descargar', href: '#descargar' },
     ]

@@ -8,6 +8,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .uni-grid {
+        column-count: 2;
+    }
+
     .milo-row,
     .correlativas-inner,
     .personalization-inner {
@@ -15,12 +19,18 @@
         gap: 2.5rem;
     }
 
-    .milo-row-reverse .milo-text-col  { order: 2; }
-    .milo-row-reverse .milo-mockup-col { order: 1; }
+    .milo-row-reverse .milo-text-col {
+        order: 2;
+    }
+
+    .milo-row-reverse .milo-mockup-col {
+        order: 1;
+    }
 }
 
 /* ─── Mobile (< 768px) ───────────────────────────────────────── */
 @media (max-width: 768px) {
+
     /* Hero — texto primero, cards después */
     .hero-inner {
         grid-template-columns: 1fr;
@@ -98,7 +108,7 @@
 
     /* Universities */
     .uni-grid {
-        grid-template-columns: 1fr;
+        column-count: 1;
     }
 
     /* Section headers */

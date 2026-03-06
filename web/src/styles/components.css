@@ -93,11 +93,14 @@
 
 /* ─── Universities ───────────────────────────────────────────── */
 .uni-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    max-width: 720px;
-    margin-inline: auto;
+    column-count: 3;
+    column-gap: 1.5rem;
+    width: 100%;
+}
+
+.uni-grid>div {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
 }
 
 /* ─── Milo rows ──────────────────────────────────────────────── */
@@ -108,8 +111,13 @@
     align-items: center;
 }
 
-.milo-row-reverse .milo-text-col  { order: 1; }
-.milo-row-reverse .milo-mockup-col { order: 2; }
+.milo-row-reverse .milo-text-col {
+    order: 1;
+}
+
+.milo-row-reverse .milo-mockup-col {
+    order: 2;
+}
 
 /* ─── Correlativas ───────────────────────────────────────────── */
 .correlativas-inner {
