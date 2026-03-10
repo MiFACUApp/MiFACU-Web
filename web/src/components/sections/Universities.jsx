@@ -20,7 +20,7 @@ const unis = [
         ],
     },
     {
-        name: 'UNCAS',
+        name: 'UNCAUS',
         full: 'Universidad Nacional del Chaco Austral',
         carreras: [
             { name: 'Ingeniería en Sistemas de Información', calendar: false },
@@ -41,17 +41,17 @@ const unis = [
         name: 'UNNE Agrarias',
         full: 'Ciencias Agrarias',
         carreras: [
-            { name: 'Ingeniería Industrial', calendar: false },
-            { name: 'Ingeniería Agronómica', calendar: false },
+            { name: 'Ingeniería Industrial', calendar: true },
+            { name: 'Ingeniería Agronómica', calendar: true },
         ],
     },
     {
         name: 'UNNE Económicas',
         full: 'Ciencias Económicas',
         carreras: [
-            { name: 'Contador Público', calendar: false },
-            { name: 'Licenciado en Administración', calendar: false },
-            { name: 'Licenciado en Economía', calendar: false },
+            { name: 'Contador Público', calendar: true },
+            { name: 'Licenciado en Administración', calendar: true },
+            { name: 'Licenciado en Economía', calendar: true },
         ],
     },
     {
@@ -67,8 +67,8 @@ const unis = [
         name: 'UNNE Veterinarias',
         full: 'Ciencias Veterinarias',
         carreras: [
-            { name: 'Ciencias Veterinarias', calendar: false },
-            { name: 'Tecnicatura en Administración de Empresas', calendar: false },
+            { name: 'Ciencias Veterinarias', calendar: true },
+            { name: 'Tecnicatura en Administración de Empresas', calendar: true },
         ],
     },
     {
@@ -76,32 +76,32 @@ const unis = [
         full: 'Derecho y Ciencias Sociales y Políticas',
         carreras: [
             { name: 'Martillero Público', calendar: false },
-            { name: 'Abogacía', calendar: false },
+            { name: 'Abogacía', calendar: true },
         ],
     },
     {
         name: 'UNNE Ingeniería',
         full: 'Ingeniería',
         carreras: [
-            { name: 'Ingeniería Civil', calendar: false },
-            { name: 'Ingeniería Electromecánica', calendar: false },
-            { name: 'Ingeniería Mecánica', calendar: false },
+            { name: 'Ingeniería Civil', calendar: true },
+            { name: 'Ingeniería Electromecánica', calendar: true },
+            { name: 'Ingeniería Mecánica', calendar: true },
         ],
     },
     {
         name: 'UNNE Medicina',
         full: 'Medicina',
         carreras: [
-            { name: 'Licenciatura en Enfermería', calendar: false },
-            { name: 'Medicina', calendar: false },
-            { name: 'Licenciatura en Kinesiología y Fisiatría', calendar: false },
+            { name: 'Licenciatura en Enfermería', calendar: true },
+            { name: 'Medicina', calendar: true },
+            { name: 'Licenciatura en Kinesiología y Fisiatría', calendar: true },
         ],
     },
     {
         name: 'UNNE Odontología',
         full: 'Odontología',
         carreras: [
-            { name: 'Odontología', calendar: false },
+            { name: 'Odontología', calendar: true },
         ],
     },
 ]
